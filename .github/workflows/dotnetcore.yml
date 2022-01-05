@@ -26,4 +26,4 @@ jobs:
     - name: Tests
       run: |
         dotnet restore
-        dotnet test
+        dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
